@@ -1,0 +1,202 @@
+Delivered-To: euberfabiosouza@gmail.com
+Received: by 2002:a05:7412:d11f:b0:101:f5c6:ffae with SMTP id bb31csp667694rdb;
+        Fri, 15 Mar 2024 19:45:27 -0700 (PDT)
+X-Received: by 2002:a05:6e02:1a6b:b0:366:61b8:6ced with SMTP id w11-20020a056e021a6b00b0036661b86cedmr6731265ilv.13.1710557127160;
+        Fri, 15 Mar 2024 19:45:27 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1710557127; cv=none;
+        d=google.com; s=arc-20160816;
+        b=khGC3iFu2YqgRxPEzLF0cJSrR43SJ4wP6gynfbSHGO7IsT2tpqHASY10S2yeEppnuB
+         tzXxySnUKLuP/NibpSzcTYv8YDd5J9TiDj3GPIhcpMMaOrHx/6mMnSeeL+8vwMQmINtV
+         MfW5uMLUQgtAV/rGVuL4XgvgKBcYU4dmqNeBQvW0GVlnEZJTUlHU0tkFfKmc6xUXR0yi
+         BQf1RbqoxjCiJpMWB+G1bN5wNopmNnKtOIwamJpX6bEKBhdAv5l1k40ZfdZHWLnAhyeD
+         gRk74nFtqXuvvbvL9Po4EMTlYm9SCmhQRy0KJAYFLYDH+2tDDdqS7VU53O/H9wGC/TeR
+         gJXQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:from:subject:message-id:reply-to:date:mime-version
+         :dkim-signature;
+        bh=ypBkiBRnNIr3f/vG7C5enVFHBf294uZMwCTdV3wZu6o=;
+        fh=5K9XUVe8eJWTh62FMJPj2il/Y4Bvn0rcjNCgIaA8HzM=;
+        b=EvsrcL4ohHrg4zgxggFp8pvwQNYpB/5xhxvh9cPyeNnMA1/KbgBQzIosKs5Y1SjGSn
+         1Pa73hnOVcxebR1FoDR6WcvgoF/9gXxEDIpuSjK9HVLfi5MX5XYM8EZuQoBPjUNwozTj
+         PICV+z44d0c5yD2sqD+EX0as/E/AS9jZMcKqDRqkZ9g6cTNIBckGPatf8jE4FtA8A+PT
+         A74YRc+MiStVfOk78m36WbA1ZOZ/YRPjRN8bJSfbOOSAwr6NNgwXMXD3eF+DSb7PDJGq
+         PWC9s784OVaL9yeJ96ej5m48D9OayrKpRnOcwm6Lp1uo25jZ7938Ztoc/VYuovGp9gDT
+         /BIQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b="2jW//ord";
+       spf=pass (google.com: domain of 3xgf1zrmkan8esjwftbgfuz-opsfqmzhpphmf.dpn@drive-notifications.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3xgf1ZRMKAN8ESJWFTBGFUZ-OPSFQMZHPPHMF.DPN@drive-notifications.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+Return-Path: <3xgf1ZRMKAN8ESJWFTBGFUZ-OPSFQMZHPPHMF.DPN@drive-notifications.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id 20-20020a0566380a5400b004775517e1fdsor374947jap.0.2024.03.15.19.45.26
+        for <euberfabiosouza@gmail.com>
+        (Google Transport Security);
+        Fri, 15 Mar 2024 19:45:27 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3xgf1zrmkan8esjwftbgfuz-opsfqmzhpphmf.dpn@drive-notifications.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20230601 header.b="2jW//ord";
+       spf=pass (google.com: domain of 3xgf1zrmkan8esjwftbgfuz-opsfqmzhpphmf.dpn@drive-notifications.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3xgf1ZRMKAN8ESJWFTBGFUZ-OPSFQMZHPPHMF.DPN@drive-notifications.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20230601; t=1710557126; x=1711161926; dara=google.com;
+        h=to:from:subject:message-id:reply-to:date:mime-version:from:to:cc
+         :subject:date:message-id:reply-to;
+        bh=ypBkiBRnNIr3f/vG7C5enVFHBf294uZMwCTdV3wZu6o=;
+        b=2jW//ordsr3Hfwi8RHyWvRgXcL9dRUeSEoiLggN+wk5QrWdGso0L/VXRW7Iic3KL7a
+         1tvgYDSXcnd2QnxFNyDmEKu9nC6S9wqurEFy9e/BTmhOdUDUFxZoSphOlb0wgkL9tDX/
+         51Jg2A9A1mclbsaMz3lUHel9fRpJW+NK8IXyu8QTPQKkQsr+Ynn/ZFPePd5BKyHYSv0X
+         euvQIh37WNaDu3IRB88t3IyZdFwtLxaarXZxd7tFHkeNIP9qvyQ+FUlsdMUp69vp5BBm
+         A4srwsleurkjzQ8/w+A/SBjnTFvbPAI/VTcKNKMmVhBI5VrkHZB5zzxTyX4Q7IkTQ15m
+         P9CQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1710557126; x=1711161926;
+        h=to:from:subject:message-id:reply-to:date:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=ypBkiBRnNIr3f/vG7C5enVFHBf294uZMwCTdV3wZu6o=;
+        b=rORv3wvjiPRsIQQWlC5rH2Z/i7dk2zrDKGFUvQWgVRouqMzEzNsfI0JoQiPpg3/epR
+         I4kjMbpegnE2KgVf4ptKxa/+6ZTBgKLzk8vqSszqmiDfhNSabXfyztqY+gwWPiYWhuSD
+         rak7CHqTvG0vQert4DAqQn1Zy8S6RJ/uFxWN30Em8/u3w6LnL5j5FQZXb2kQwB0gxLQ3
+         Qqsu3CvQVu6zuRXL4E1YAsZmwAdJig/A+1XMnu4koWZf3UCAfsvnaWFXWiiAvQIkWMn1
+         aouf1RN5lsQhsPIXORoPayF/QH4FNUJQ5zc7WaodBIWoK76B3O9jTn3oA88Gte82xJD5
+         yuJA==
+X-Gm-Message-State: AOJu0YySFs73YSJMvzYlQKIJ4r0kGvqVIKuvKuAfhMqcSXX5HVWFE2sF
+	ctVqOElGtDu8tt6qZnoN9hfa7BpE/T8mAIb/yCpAJEtgopvwThe2xMFbgdVZ36LLYE6A7iU/kaZ
+	HSC9FpGC/uBjL9bHSn82T5HShwWZpAW6lPwIzUqyKfBjME21hnnFSai+MBfB+U7R3zuG9zhXKKB
+	Aa1FoS2mAcPEt7Tml03hIkRGwOGG7A/m80zhCSeDREZZkjXtN4iPR1bFJNT88VX0jFNfhysyN3M
+	zyQyMdc+A==
+X-Google-Smtp-Source: AGHT+IGLeMozUPTtJbi2gTwuAoYOWWzmkWhfQUB4ewJPNvWDqGwuufMKGRGZ+/+ulYAlQaLN++spV+Mb2ZGN7NDv5j3aDkBwie+7upgODrpazG28ZCaOV7Rr6uER4ORMAggUKA==
+MIME-Version: 1.0
+X-Received: by 2002:a6b:c3c9:0:b0:7c7:f935:9668 with SMTP id
+ t192-20020a6bc3c9000000b007c7f9359668mr6344865iof.4.1710557126589; Fri, 15
+ Mar 2024 19:45:26 -0700 (PDT)
+Date: Fri, 15 Mar 2024 19:45:26 -0700
+Reply-To: drivesafety-noreply@google.com
+X-Notifications: -5106528039058812109
+X-Notifications-Bounce-Info: AaJ7rErX2b2XljZRIvMS7hyQahEqSpg6kD1x4nUnGqK_Jrjfe6N1Ph9t6YE_0BjPjErrpd-znEk9AvwCdmyk9ONbgvAOVbW4_NfaeCrcpbcIpBzSOC7UgZGWZYGjex5imSX94PMac-4KeVuGiVrP7lV4n-UxfBtzKYV6G1ESicGkJwk3Z7ELWpfLP0AIn1SjhWApNrJ3OVIT3W4fwnNl6IMyIC6uYD-yH3FrNjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <f1VjbeC6fXrKu2Zeg9Q5fA@notifications.google.com>
+Subject: =?UTF-8?Q?Seu_arquivo_viola_os_Termos_de_Servi=C3=A7o_do_Google_Dr?=
+	=?UTF-8?Q?ive?=
+From: =?UTF-8?Q?Seguran=C3=A7a_do_Google_Drive=C2=A0?= <drivesafety-noreply@google.com>
+To: euberfabiosouza@gmail.com
+Content-Type: multipart/alternative; boundary="000000000000e60a7b0613be1df7"
+
+--000000000000e60a7b0613be1df7
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+Content-Transfer-Encoding: base64
+
+U2V1IGFycXVpdm8gdmlvbGEgb3MgVGVybW9zIGRlIFNlcnZpw6dvIGRvIEdvb2dsZSBEcml2ZS4N
+Cg0KIkPDs3BpYSBkZSBUT1BPQ0FEMjAwMFYxNy5leGUiIGluY2x1aSBjb250ZcO6ZG8gcXVlIHZp
+b2xhIG9zIFBvbMOtdGljYSBzb2JyZSAgDQptYWx3YXJlIGUgY29udGXDumRvIG1hbGljaW9zbyBz
+ZW1lbGhhbnRlIGRvIEdvb2dsZSBEcml2ZS4gQWxndW5zIHJlY3Vyc29zICANCnJlbGFjaW9uYWRv
+cyBhIGVzdGUgYXJxdWl2byBwb2RlbSBlc3RhciByZXN0cml0b3MuDQoNClNlIHZvY8OqIGFjaGEg
+cXVlIGlzc28gw6kgdW0gZXJybyBlIHF1ZXIgcXVlIGEgRXF1aXBlIGRlIGNvbmZpYWJpbGlkYWRl
+IGUgIA0Kc2VndXJhbsOnYSBleGFtaW5lIG8gYXJxdWl2bywgcGXDp2EgdW1hIGFuw6FsaXNlIGFi
+YWl4by4NCmh0dHBzOi8vZHJpdmUuZ29vZ2xlLmNvbS9yZXF1ZXN0cmV2aWV3P2lkPTFqRnFiV2hK
+MlFRUlIzMFdvLWlVczZiRS1KSWt1VzltTCZ1c3A9ZW1haWwtbm90aWZpY2F0aW9uDQoNClBvbMOt
+dGljYSBzb2JyZSBtYWx3YXJlIGUgY29udGXDumRvIG1hbGljaW9zbyBzZW1lbGhhbnRlDQpodHRw
+czovL3N1cHBvcnQuZ29vZ2xlLmNvbS9kb2NzL2Fuc3dlci8xNDg1MDUjbWFsd2FyZQ0K
+--000000000000e60a7b0613be1df7
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><meta http-equiv=3DContent-Type content=3D"text/html; charset=
+=3DUTF-8" /><link href=3Dhttps://fonts.googleapis.com/css?family=3DRoboto:3=
+00,400,500,bold|Google+Sans:300,400,500,bold rel=3Dstylesheet nonce=3DRSVZV=
+fQUm_etPSM7635-vQ><link href=3Dhttps://fonts.googleapis.com/icon?family=3DM=
+aterial+Icons+Extended rel=3Dstylesheet nonce=3DRSVZVfQUm_etPSM7635-vQ><lin=
+k href=3Dhttps://fonts.googleapis.com/css2?family=3DGoogle+Material+Icons:w=
+ght@400;500;700 rel=3Dstylesheet nonce=3DRSVZVfQUm_etPSM7635-vQ><title>Seu =
+arquivo viola os Termos de Servi=C3=A7o do Google Drive</title></head><body=
+><img src=3D"https://notifications.googleapis.com/email/t/AFG8qyXhxf-RD8ZYw=
+ZWFb4mkavJrn7frqXK2UGIAwfXhNE1nWqWae7SvMG93wjI3a9v9OcCu2CBzWArujEVdzOoxFnyD=
+TTxRhA_M45t5LQ8tYkBWdCkGuDYA_8vSC-rxTNjvbwPO8a363w7VP_4fsN_kXEiC3dukAQuQ6dg=
+9YjIR93-0Y0WO-_7f0kn9YkE1nRPFu6RgxuuUaQFWu9Bv2rflUZzJ1Mftbum0_S54uftPG7NGnw=
+VBO1hbE8HzZSJt5GS7wX62FAfjyxbmKvNHSFYIoGWLLrm8F85Q0GiXBg9oDZh5OzTMx1s/a.gif=
+" width=3D1 height=3D1><div style=3Ddisplay:&#32;none;&#32;max&#45;height:&=
+#32;0;&#32;overflow:&#32;hidden;>Seu arquivo viola os Termos de Servi=C3=A7=
+o do Google Drive</div><div style=3Dborder&#45;color:&#32;#dadce0;&#32;bord=
+er&#45;style:&#32;solid;&#32;border&#45;width:&#32;1px;&#32;padding:&#32;32=
+px&#32;32px&#32;32px&#32;32px;&#32;margin:&#32;auto;&#32;border&#45;radius:=
+&#32;.5rem;&#32;background&#45;color:&#32;#fff;&#32;max&#45;width:640px;><t=
+able style=3D"border-collapse: collapse; display: flex;" role=3Dpresentatio=
+n><tbody style=3D"min-width: 0;"><tr><td><div style=3D"padding-top: 0; padd=
+ing-bottom:0;"><img src=3Dhttps://www.gstatic.com/images/branding/googlelog=
+o/2x/googlelogo_color_112x36dp.png width=3D102 height=3D32 border=3D0 aria-=
+hidden=3Dtrue alt=3D"" /></div></td></tr></tbody></table><table style=3D"bo=
+rder-collapse: collapse; display: flex;" role=3Dpresentation><tbody style=
+=3D"min-width: 0;"><tr><td><h3 style=3Dfont&#45;weight:&#32;normal;&#32;mar=
+gin:&#32;0;&#32;padding&#45;top:&#32;0;&#32;padding&#45;bottom:&#32;0;&#32;=
+font&#45;size:&#32;28px;&#32;color:&#32;#2b2c34;&#32;font&#45;family:&#32;&=
+#39;Google&#32;Sans&#39;,Roboto,Arial,Helvetica,sans&#45;serif;>Seu arquivo=
+ viola os Termos de Servi=C3=A7o do Google Drive</h3></td></tr><tr><td><div=
+ style=3Dpadding&#45;top:&#32;0;&#32;font&#45;size:&#32;16px;&#32;color:&#3=
+2;#5f6368;&#32;font&#45;family:&#32;Roboto,&#39;Google&#32;Sans&#39;,Arial,=
+Helvetica,sans&#45;serif;>"C=C3=B3pia de TOPOCAD2000V17.exe" inclui conte=
+=C3=BAdo que viola os <a href=3D"https://notifications.googleapis.com/email=
+/redirect?t=3DAFG8qyU0ekNvr4jtRiIP4QMwpz0M9Sg2bsdq17yD-lILSz5TNp3NjKQMkLCuc=
+GxTYVZq-BJga-daWi5h9JWkSROke8kigjBPrUKBAUeGnCXtVqS0Coq3E5rV47RWyC5qdaCfmwBf=
+yja_bpRFfKrrzqJOZqWggerPXb7kPkneIqIR_EkPifaapjVmylwMyQ-ZDwVtceAp3x5_tZezZTt=
+sIDVSIgFLyCht-OpuEIRC1zbmZXr8gKphFV9ra3DvE2VgeWM6cJqXB9OqG7M-IN2daebLXbbrRZ=
+HuoPPuPCio9uyIM747&amp;r=3DeJzLKCkpKLbS1y8uLSjILyrRS8_PT89J1UvOz9VPyU8u1k_M=
+Ky5PLdI3NLEwNTBVzk3MKU8sSgUAE-ATCg&amp;s=3DALHZ2r5UBrWeaH5pNps3L0aeB669">Po=
+l=C3=ADtica sobre malware e conte=C3=BAdo malicioso semelhante</a> do Googl=
+e Drive. Alguns recursos relacionados a este arquivo podem estar restritos.=
+&nbsp;Se voc=C3=AA acha que isso =C3=A9 um erro e quer que a Equipe de conf=
+iabilidade e seguran=C3=A7a examine o arquivo, pe=C3=A7a uma an=C3=A1lise a=
+baixo.</div></td></tr></tbody></table><table role=3Dpresentation style=3D"m=
+argin: 0 auto; border-collapse: collapse; display: flex;"><tbody style=3D"m=
+in-width: 0;"><tr><td width=3D600><div style=3Dfont&#45;size:&#32;14px;&#32=
+;color:&#32;#202124;&#32;font&#45;family:&#32;Roboto,&#39;Google&#32;Sans&#=
+39;,Arial,Helvetica,sans&#45;serif;&#32;padding&#45;top:&#32;24px;&#32;padd=
+ing&#45;bottom:&#32;10px;><strong>Arquivo restrito</strong></div></td><td r=
+owspan=3D3 style=3Dvertical-align:bottom;><div style=3Dvertical-align:botto=
+m;><img src=3Dhttps://services.google.com/fh/files/emails/new_yshield.png w=
+idth=3D66 height=3D76 aria-hidden=3Dtrue alt=3D""></div></td></tr><tr><td><=
+div id=3Ddrive-file-chip style=3D"all: none;"><a href=3D"https://notificati=
+ons.googleapis.com/email/redirect?t=3DAFG8qyVGqithW4Gc7-1fzoBYupTLgVmqOBhkB=
+z9tDfMckWD2VekWBHKCxklAaWy9DUr3lKEIumGKVj9pa9laccBoKxEe1uip21gCBpCLbNpgVCrw=
+to3dRUvI77Www6WHs4ZE9ZNSuQf9XmZRuYgw4k4juq19f5L5M4s_YEEGRGvJ-CRx8JL4Q2Qly_u=
+0Mf7sLTg0PcPPhgY5Zceqt4aGGhi10_gDDXHWowd6hrLD19udYsl059-g_-X_GjjI9wdTnNBsbm=
+MChO6gPgBncRs5QgTr7tJ19mIYY-vq9J5OQA&amp;r=3DeJzLKCkpKLbS108pyixL1UvPz0_PSd=
+VLzs_VT8vMSdVP0TfMcitMCs_wMgoMDAoyNgjP180MLTZLctX18swuDbfM9dEvy0wtty8tLrAFG=
+xFfnpoEAN-kHYY&amp;s=3DALHZ2r4kxj1Cz7XYxygO_1HLVP-5" target=3D_blank style=
+=3D"color: #3c4043; display: inline-block; max-width: 100%; text-decoration=
+: none; vertical-align: top;border: 1px solid #dadce0; max-width: 400px; bo=
+rder-radius: 16px; white-space: nowrap;min-width: 0;"><div style=3D"padding=
+: 6px 12px; line-height: 18px; overflow: hidden; text-overflow: ellipsis;">=
+<span style=3D"display: inline-block; vertical-align: top; min-width: 26px;=
+ width: 26px;"><img src=3Dhttps://drive-thirdparty.googleusercontent.com/32=
+/type/application/x-dosexec width=3D18 height=3D18 style=3D"vertical-align:=
+ top;" role=3Dpresentation></span><span style=3D"font: 500 14px/18px &#39;G=
+oogle Sans&#39;,Roboto,Arial,Helvetica,sans-serif; display: inline; letter-=
+spacing: 0.2px;">C=C3=B3pia de TOPOCAD2000V17.exe</span></div></a></div></t=
+d></tr><tr><td><table style=3D"padding-top: 42px; height: 2rem;" role=3Dpre=
+sentation><tr><td style=3D"max-width: 400px;"><a href=3D"https://notificati=
+ons.googleapis.com/email/redirect?t=3DAFG8qyXIXo2ocRl0k-GgJ7ba3YqNcuD6eRAjz=
+4kEBpctezht_rjjk42EC9OVwlZkn76Fdhvs22RyhII6GsrYsgGQT8c8yj8Bdlds8UwYtGYYezLK=
+2RANWniaGYVMrUPAV5NoOL_zzUHWfip5vCewKr_ZvsB2E42NR2I8LJQucDDjnUcX8y_guag8h01=
+r-HKvd1L3TAOF-Y3uSGSnHisYJMsCIdzL4QX7UD4BmQ-UIvNmrydUtOjj2TYV7VsWtdJzcUiGiJ=
+2Drb9IYWIWhqs5ycR5YzQ&amp;r=3DeJzLKCkpKLbS108pyixL1UvPz0_PSdVLzs_VL0otLE0tL=
+ilKLctMLbfPTLE1zHIrTArP8DIKDAwKMjYIz9fNDC02S3LV9fLMLg23zPVRKy0usE3NTczM0c3L=
+L8lMy0xOLMnMzwMA5Zgjig&amp;s=3DALHZ2r57qJWVKwwzvLuWxzfyFpAY" target=3D_blan=
+k style=3D"text-decoration: none;" role=3Dbutton><div style=3Ddisplay:&#32;=
+inline;&#32;color:&#32;#fff;&#32;font&#45;size:&#32;14px;&#32;font&#45;fami=
+ly:&#32;&#39;Google&#32;Sans&#39;,Roboto,Arial,Helvetica,sans&#45;serif;&#3=
+2;background&#45;color:&#32;#1a73e8;&#32;border:&#32;solid;&#32;border&#45;=
+color:&#32;#1a73e8;&#32;border&#45;width:&#32;thin;&#32;border&#45;radius:&=
+#32;.25rem;&#32;height:&#32;2.25rem;&#32;padding:&#32;.75rem&#32;1.5rem;&#3=
+2;cursor:&#32;pointer;&#32;letter&#45;spacing:&#32;.015625rem;><strong>Soli=
+citar uma an=C3=A1lise</strong></div></a></td></tr></table></td></tr></tbod=
+y></table></div><div style=3Dcolor:&#32;#5f6368;&#32;font&#45;size:&#32;.75=
+rem;&#32;font&#45;family:&#32;Roboto,&#39;Google&#32;Sans&#39;,Arial,Helvet=
+ica,sans&#45;serif;&#32;line&#45;height:&#32;1rem;&#32;letter&#45;spacing:&=
+#32;.3px;&#32;display:&#32;flex;&#32;max&#45;width:&#32;640px;&#32;padding:=
+&#32;10px;&#32;margin:&#32;auto;&#32;margin&#45;top:&#32;32px;><img src=3Dh=
+ttps://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_grey_tm_col=
+or_96x40dp.png height=3D40 width=3D96 border=3D0 aria-hidden=3Dtrue /><foot=
+er><div style=3D"padding-left: 10px;">Google LLC 1600 Amphitheatre Parkway,=
+ Mountain View, CA 94043.<br>Este e-mail foi enviado porque seu arquivo vio=
+la os Termos de Servi=C3=A7o do Google Drive.</div></footer></div></body></=
+html>
+--000000000000e60a7b0613be1df7--

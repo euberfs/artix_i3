@@ -1,0 +1,11 @@
+https://feeds.folha.uol.com.br/mundo/rss091.xml
+https://fosslinux.com/feed/
+https://terminalroot.com.br/feed.xml
+http://www.bbc.co.uk/portuguese/index.xml
+https://atareao.es/feed
+
+# queries
+"query:unread:unread = \"yes\""
+"query: Arch Linux:title =~ \"Arch Linux\""
+
+# vim:fconfig

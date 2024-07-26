@@ -1,0 +1,29 @@
+# Colour scheme
+# source ~/.config/mutt/themes/dracula.muttrc
+source ~/.config/mutt/themes/gruvbox.muttrc
+
+# IMAP
+set imap_user = USER_HERE@gmail.com
+set imap_pass = PASSWORD_HERE
+set spoolfile = imaps://imap.gmail.com/INBOX
+set folder = imaps://imap.gmail.com/
+set record="imaps://imap.gmail.com/[Gmail]/Sent Mail"
+set postponed="imaps://imap.gmail.com/[Gmail]/Drafts"
+set mbox="imaps://imap.gmail.com/[Gmail]/All Mail"
+set header_cache = "~/.config/mutt/cache/headers"
+set message_cachedir = "~/.config/mutt/cache/bodies"
+set certificate_file = "~/.config/mutt/certificates"
+
+# SMTP
+set smtp_url = "smtp://USER_HERE@smtp.gmail.com:587/"
+set smtp_pass = $imap_pass
+set ssl_force_tls = yes # Require encrypted connection
+
+# Composition
+set editor = "nvim"     
+set edit_headers = yes  
+set charset = UTF-8    
+unset use_domain       
+set realname = "NAME_HERE"
+set from = "USER_HERE@gmail.com"
+set use_from = yes

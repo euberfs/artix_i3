@@ -1,0 +1,339 @@
+Delivered-To: euberfabiosouza@gmail.com
+Received: by 2002:a05:7412:3615:b0:102:4756:547b with SMTP id ie21csp2800897rdb;
+        Wed, 27 Mar 2024 06:14:56 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHI0wjew9xbHrlGptfuJiFHJG6tc4WtfPR+T0c0Rn9GQY0/qkNTPIf/adF87pWpsC0gaEXE
+X-Received: by 2002:a05:6808:311:b0:3c0:395e:fc3 with SMTP id i17-20020a056808031100b003c0395e0fc3mr2219555oie.28.1711545296381;
+        Wed, 27 Mar 2024 06:14:56 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1711545296; cv=none;
+        d=google.com; s=arc-20160816;
+        b=V/GV9qk3RwpISWAG1Qenb+CD7idu1FhDqpH7FhBh3fzpzUrGWv/es36iwBM86yqzdF
+         fb2EC8KFw4nzOm+gnQVwyi3qqqcQl5i1VQCwRPns+jZIqPp7S24pPxpanDC631+LGhJg
+         TiAhOmdzbD2UlX2Fcg8GLC/pn2MR/oaiABGrRqtS9esm/liA9d4AA4Cwn2ajdH5JPnOq
+         f58TV9Yk5BWMSn31JmEeaBStKTKmAIO/lzKGuu4vT9aFqR8S+09VR/6SNXKWGzoRgcCS
+         +W5E4N0UIYdoOAVLjHIJg8fTYvKkE8qQmb2oHNrqAStjsGKooyHuudUl7zOvSL0ryFLh
+         ukKw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=message-id:list-unsubscribe-post:list-unsubscribe:feedback-id
+         :content-transfer-encoding:mime-version:date:subject:from:to
+         :cfbl-address:dkim-signature:dkim-signature;
+        bh=BsfMmNZB5Icd+q+XsoI+ibOzozeSwFeGmerUoqQBZA4=;
+        fh=l4meCr9j5IXt33sB5WEobWFBhGkVbk7IRhGrXYtPbR4=;
+        b=NfLzUCYZEDMp6BiLaSQ5/iz73dgcN/8r8HTpD23DUvXs2bj/TOuXRn/S7FBXvSzABM
+         K5bzf4O4XXhuHlyAV7Hl/WfgKvF/8ptqLQsgfGJNSY63V3n3vQ4qtD3O38GAKpfgu24F
+         OhfkPO/Ca68z/+87jOxV9IYKLAYyzHNXVljtEY+AA4GQAKQ7o5UoLJZrTGizIFKJOG7f
+         4DW8BaS1p1TlXuEch6P94DKuMZVGJyYvNDNn3KDI6IWCJPHlYHxBWtevgFQDeYfpZYGw
+         RTMcgsZLAUZ4rj6m1ZKvZ8CxiX0jY1llFyaRTwHm+la/Ua5433/VqA6boHpuyPblWhSm
+         LpuA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@clickgeo.com.br header.s=acdkim1 header.b="ZD6xIU/t";
+       dkim=pass header.i=@acems1.com header.s=dk header.b=tcD4Js4b;
+       spf=pass (google.com: domain of bounce-3095493-747-140824-euberfabiosouza=gmail.com@em-3095493.clickgeo.com.br designates 52.128.42.119 as permitted sender) smtp.mailfrom="bounce-3095493-747-140824-euberfabiosouza=gmail.com@em-3095493.clickgeo.com.br";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clickgeo.com.br
+Return-Path: <bounce-3095493-747-140824-euberfabiosouza=gmail.com@em-3095493.clickgeo.com.br>
+Received: from d38c.emsend4.com (d38c.emsend4.com. [52.128.42.119])
+        by mx.google.com with ESMTPS id fw10-20020a05622a4a8a00b004314986286bsi8459796qtb.603.2024.03.27.06.14.56
+        for <euberfabiosouza@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 27 Mar 2024 06:14:56 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-3095493-747-140824-euberfabiosouza=gmail.com@em-3095493.clickgeo.com.br designates 52.128.42.119 as permitted sender) client-ip=52.128.42.119;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@clickgeo.com.br header.s=acdkim1 header.b="ZD6xIU/t";
+       dkim=pass header.i=@acems1.com header.s=dk header.b=tcD4Js4b;
+       spf=pass (google.com: domain of bounce-3095493-747-140824-euberfabiosouza=gmail.com@em-3095493.clickgeo.com.br designates 52.128.42.119 as permitted sender) smtp.mailfrom="bounce-3095493-747-140824-euberfabiosouza=gmail.com@em-3095493.clickgeo.com.br";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clickgeo.com.br
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=acdkim1; d=clickgeo.com.br;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Feedback-ID:List-Unsubscribe:List-Unsubscribe-Post:Message-ID;
+ i=contato@clickgeo.com.br;
+ bh=BsfMmNZB5Icd+q+XsoI+ibOzozeSwFeGmerUoqQBZA4=;
+ b=ZD6xIU/tzNsYivoymqrFyDskDzPLcbHgs8Q2jjYXJI5cGKq42EfnWt0ur1sR28kbcxh9EKa0zifZ
+   h1FKljrEPIw5PxHLyJO3w7PrAsxJHcT2mIhuc8L+4LudzKUEdCitHtccPliNia1ufM18W2iUGLih
+   9dTGn2NwV86N4aJLEh10evtRWSV5pECPqdD28hjmX88B/w5aOXJCif8BfolAaXUwwa505xhpBYVM
+   6A4AxeDZ1DK/VcbiNVdxCgSrHlCOQcv5PFWrjbpGlo4nAgRiRpqQX9G8/U7ueCWAFw5HCWJ4zCJC
+   +ewWh9hAVeNWFjy2+t56kcQiGYbVPYbMk3eqNQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=dk; d=acems1.com;
+ h=To:From:Subject:Date:MIME-Version:Content-Type:Content-Transfer-Encoding:
+ Feedback-ID:List-Unsubscribe:List-Unsubscribe-Post:Message-ID;
+ bh=BsfMmNZB5Icd+q+XsoI+ibOzozeSwFeGmerUoqQBZA4=;
+ b=tcD4Js4bPrQPND1+Zri7FlJ7jMxKxi+yhet6nNwiX+ZJ//ov4Yp6Gr1faqDziOQR8v+OwI1IeliN
+   jD+U6iPAkV8h1WVs1xPpxMzcA17lBZlTVy3A+r5dfnUh+yrbkUK2iVccVULkq636R9fN0FtCNvO0
+   gGyMU5YPR5CUE3jDkeI=
+Received: by d38c.emsend4.com id h0gdt036bm4d for <euberfabiosouza@gmail.com>; Wed, 27 Mar 2024 13:14:48 +0000 (envelope-from <bounce-3095493-747-140824-euberfabiosouza=gmail.com@em-3095493.clickgeo.com.br>)
+X-Mailer: ActiveCampaign Mailer
+CFBL-Address: fbl-report@acems1.com; report=arf
+To: "Euber =?UTF-8?Q?F=C3=A1bio=20de=20Souza?=" <euberfabiosouza@gmail.com>
+From: "Anderson Medeiros" <contato@clickgeo.com.br>
+Subject: Workshop de Krigagem paraGeoprocessamento
+Date: Wed, 27 Mar 2024 08:08:54 -0500
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift-69118101866041a6737e834.65845232_=_"
+Content-Transfer-Encoding: 7bit
+X-DKIM-Options: s=acdkim1
+X-mid: ZXViZXJmYWJpb3NvdXphQGdtYWlsLmNvbSAsIGM3NDcgLCBtMTMwNyAsIHMxNjgxNA
+x-virtual-mta: d37c.emsend4.com
+Feedback-ID: 3095493:3095493.747:d37c.emsend4.com:activecampaign
+X-250ok-CID: 3095493-747
+List-Unsubscribe: <mailto:unsubscribe-10b2df3d4b70aa48a1a7d95b67f86050-747-7c9fcb3ac8ba50a7a7b30df1d6827432@d37c.emsend4.com>,
+ <http://clickgeo1.activehosted.com/box.php?nl=35&c=747&m=1307&s=7c9fcb3ac8ba50a7a7b30df1d6827432&funcml=unsub2&luha=1>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <20240327131448.9725.1772145273.swift@clickgeo1.activehosted.com>
+
+
+--_=_swift-69118101866041a6737e834.65845232_=_
+Content-Type: text/plain; charset=utf-8
+
+Você acredita? 
+ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌
+
+Olá! Você sabe o que é Krigagem?
+
+A Krigagem é uma técnica de interpolação estatística que permite
+estimar valores em locais não amostrados, com base nas propriedades
+espaciais dos dados conhecidos.
+
+Ela é usada, por exemplo, para criar mapas contínuos a partir de
+pontos de dados discretos, como a distribuição de minerais no solo ou
+variações de altitude.
+
+Ela considera a distância e a relação espacial entre os pontos de
+dados, proporcionando estimativas mais precisas e realistas do que
+métodos de interpolação simples.
+
+Quer aprender como usar na prática a Krigagem em projetos de
+Geoprocessamento?
+
+Vamos realizar um Workshop aberto ao público na próxima segunda-feira
+às 20h, numa sala fechada pelo Zoom.
+
+Inclusive vai ter certificado para quem assistir o Workshop por
+completo.
+
+Quer participar? Entre no Grupo Exclusivo dos alunos deste Workshop:
+
+[QUERO ENTRAR no Grupo do Workshop de Krigagem]
+
+Caso você não consiga entrar pelo link acima, me chame no WhatsApp (83
+9.8885.5525) pedindo para entrar no Workshop de Krigagem.
+
+Combinado?
+
+Enviado para: euberfabiosouza@gmail.com
+
+Cancelar inscrição
+
+ClickGeo, Rua Elisa de Holanda Cavalcante 118, João Pessoa - Paraíba, 58075705, Brasil
+--_=_swift-69118101866041a6737e834.65845232_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html>=0A<head><meta http-equiv=3D"Content-Type" content=3D"=
+text/html; charset=3Dutf-8"><meta name=3D"viewport" content=3D"width=3Ddevi=
+ce-width, minimal-ui, initial-scale=3D1.0, maximum-scale=3D1.0, user-scalab=
+le=3D0;"><meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><meta n=
+ame=3D"format-detection" content=3D"telephone=3Dno, date=3Dno, email=3Dno, =
+address=3Dno"><meta name=3D"x-apple-disable-message-reformatting"><!--[if (=
+mso 16)]><style type=3D"text/css"> a { text-decoration: none; } </style><![=
+endif]--><!--[if gte mso 9]><style> sup { font-size: 100% !important; } </s=
+tyle><![endif]--><!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:Allow=
+PNG></o:AllowPNG><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSet=
+tings></xml><![endif]--><!--[if gte mso 9]><style>sup { font-size: 100% !im=
+portant; }</style><![endif]--><!--[if !mso]><!-- --><link href=3D"https://f=
+onts.googleapis.com/css?family=3DRoboto:400,400i,700,700i" rel=3D"styleshee=
+t"><!--<![endif]--><style type=3D"text/css">#outlook a=0A{=09padding:0;}.es=
+-button {=09mso-style-priority:100!important;=09text-decoration:none!import=
+ant;}a[x-apple-data-detectors] {=09color:inherit!important;=09text-decorati=
+on:none!important;=09font-size:inherit!important;=09font-family:inherit!imp=
+ortant;=09font-weight:inherit!important;=09line-height:inherit!important;}.=
+es-desk-hidden {=09display:none;=09float:left;=09overflow:hidden;=09width:0=
+;=09max-height:0;=09line-height:0;=09mso-hide:all;}@media only screen and (=
+max-width:600px) {p, ul li, ol li, a { line-height:150%!important } h1, h2,=
+ h3, h1 a, h2 a, h3 a { line-height:120% } h1 { font-size:30px!important; t=
+ext-align:center } h2 { font-size:26px!important; text-align:center } h3 { =
+font-size:20px!important; text-align:center } .es-header-body h1 a, .es-con=
+tent-body h1 a, .es-footer-body h1 a { font-size:30px!important; text-align=
+:left } .es-header-body h2 a, .es-content-body h2 a, .es-footer-body h2 a {=
+ font-size:26px!important; text-align:left } .es-header-body h3 a, .es-cont=
+ent-body h3 a,=0A.es-footer-body h3 a { font-size:20px!important; text-alig=
+n:left } .es-menu td a { font-size:13px!important } .es-header-body p, .es-=
+header-body ul li, .es-header-body ol li, .es-header-body a { font-size:16p=
+x!important } .es-content-body p, .es-content-body ul li, .es-content-body =
+ol li, .es-content-body a { font-size:16px!important } .es-footer-body p, .=
+es-footer-body ul li, .es-footer-body ol li, .es-footer-body a { font-size:=
+16px!important } .es-infoblock p, .es-infoblock ul li, .es-infoblock ol li,=
+ .es-infoblock a { font-size:12px!important } *[class=3D"gmail-fix"] { disp=
+lay:none!important } .es-m-txt-c, .es-m-txt-c h1, .es-m-txt-c h2, .es-m-txt=
+-c h3 { text-align:center!important } .es-m-txt-r, .es-m-txt-r h1, .es-m-tx=
+t-r h2, .es-m-txt-r h3 { text-align:right!important } .es-m-txt-l, .es-m-tx=
+t-l h1, .es-m-txt-l h2, .es-m-txt-l h3 { text-align:left!important } .es-m-=
+txt-r img, .es-m-txt-c img, .es-m-txt-l img { display:inline!important } .e=
+s-button-border {=0Adisplay:inline-block!important } a.es-button, button.es=
+-button { font-size:20px!important; display:inline-block!important } .es-ad=
+aptive table, .es-left, .es-right { width:100%!important } .ac-footer, .es-=
+content table, .es-header table, .es-footer table, .es-content, .es-footer,=
+ .es-header { width:100%!important; max-width:600px!important } .ac-footer =
+td, .ac-footer p, .es-adapt-td { display:block!important; width:100%!import=
+ant } .adapt-img { width:100%!important; height:auto!important } .es-m-p0 {=
+ padding:0px!important } .es-m-p0r { padding-right:0px!important } .es-m-p0=
+l { padding-left:0px!important } .es-m-p0t { padding-top:0px!important } .e=
+s-m-p0b { padding-bottom:0!important } .es-m-p20b { padding-bottom:20px!imp=
+ortant } .es-mobile-hidden, .es-hidden { display:none!important } tr.es-des=
+k-hidden, td.es-desk-hidden, table.es-desk-hidden { width:auto!important; o=
+verflow:visible!important; float:none!important; max-height:inherit!importa=
+nt;=0Aline-height:inherit!important } tr.es-desk-hidden { display:table-row=
+!important } table.es-desk-hidden { display:table!important } td.es-desk-me=
+nu-hidden { display:table-cell!important } .es-menu td { width:1%!important=
+ } table.es-table-not-adapt, .esd-block-html table { width:auto!important }=
+ table.es-social { display:inline-block!important } table.es-social td { di=
+splay:inline-block!important } .es-desk-hidden { display:table-row!importan=
+t; width:auto!important; overflow:visible!important; max-height:inherit!imp=
+ortant } }</style></head><body class=3D"es-wrapper-color" lang=3D"und" styl=
+e=3D"width:100%;font-family:roboto, 'helvetica neue', helvetica, arial, san=
+s-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding:0;M=
+argin:0;background-color:#FFFFFF">=09=09<div style=3D"display: none !import=
+ant; padding: 0; height: 1px; font-size: 1px; background-color: inherit !im=
+portant; opacity: 0; color: transparent; mso-line-height-rule: exactly; lin=
+e-height:1px;=0Amso-hide:all;">=0A=09=09=09Voc=C3=AA acredita?=0A=09=09=09<=
+div style=3D"display: none; max-height: 0px; overflow: hidden;">=0A=09=09=
+=09=09&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=
+=E2=80=8C&nbsp;=E2=80=8C=0A=09=09=09</div>=0A=0A=09=09</div>=0A<table class=
+=3D"es-wrapper" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" role=3D"=
+none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:co=
+llapse;border-spacing:0px;padding:0;Margin:0;width:100%;height:100%;backgro=
+und-repeat:repeat;background-position:center top;background-color:#FFFFFF">=
+<tr><td valign=3D"top" style=3D"padding:0;Margin:0"><table cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"es-content" align=3D"center" role=3D"none" sty=
+le=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;bo=
+rder-spacing:0px;table-layout:fixed !important;width:100%"><tr><td align=3D=
+"center" bgcolor=3D"#ffffff" style=3D"padding:0;Margin:0;background-color:#=
+ffffff"><table bgcolor=3D"#ffffff" class=3D"es-content-body" align=3D"cente=
+r" cellpadding=3D"0" cellspacing=3D"0" role=3D"none" style=3D"mso-table-lsp=
+ace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;ba=
+ckground-color:transparent;width:650px"><tr><td align=3D"left" style=3D"pad=
+ding:0;Margin:0"><table cellpadding=3D"0"=0Acellspacing=3D"0" width=3D"100%=
+" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;border-c=
+ollapse:collapse;border-spacing:0px"><tr><td align=3D"center" valign=3D"top=
+" style=3D"padding:0;Margin:0;width:650px"><table cellpadding=3D"0" cellspa=
+cing=3D"0" width=3D"100%" role=3D"presentation" style=3D"mso-table-lspace:0=
+pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"><tr><t=
+d align=3D"left" style=3D"padding:0;Margin:0"><p style=3D"Margin:0;-webkit-=
+text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactl=
+y;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-h=
+eight:27px;color:#333333;font-size:18px"><br></p>=0A<p style=3D"Margin:0;-w=
+ebkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:=
+exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;=
+line-height:27px;color:#333333;font-size:18px">Ol=C3=A1! Voc=C3=AA sabe o q=
+ue =C3=A9 Krigagem?</p>=0A<br><p style=3D"Margin:0;-webkit-text-size-adjust=
+:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:ro=
+boto, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color=
+:#333333;font-size:18px">A Krigagem =C3=A9 uma t=C3=A9cnica de interpola=
+=C3=A7=C3=A3o estat=C3=ADstica que permite estimar valores em locais n=
+=C3=A3o amostrados, com base nas propriedades espaciais dos dados conhecido=
+s.</p>=0A<br><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-si=
+ze-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica =
+neue', helvetica, arial, sans-serif;line-height:27px;color:#333333;font-siz=
+e:18px">Ela =C3=A9 usada, por exemplo, para criar mapas cont=C3=ADnuos a pa=
+rtir de pontos de dados discretos, como a distribui=C3=A7=C3=A3o de minerai=
+s no solo ou varia=C3=A7=C3=B5es de altitude.</p>=0A<br><p style=3D"Margin:=
+0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-r=
+ule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-se=
+rif;line-height:27px;color:#333333;font-size:18px">Ela considera a dist=
+=C3=A2ncia e a rela=C3=A7=C3=A3o espacial entre os pontos de dados, proporc=
+ionando estimativas mais precisas e realistas do que m=C3=A9todos de interp=
+ola=C3=A7=C3=A3o simples.</p>=0A<br><p style=3D"Margin:0;-webkit-text-size-=
+adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-fam=
+ily:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px=
+;color:#333333;font-size:18px">Quer aprender como usar na pr=C3=A1tica a Kr=
+igagem em projetos de Geoprocessamento?</p>=0A<br><p style=3D"Margin:0;-web=
+kit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:ex=
+actly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;li=
+ne-height:27px;color:#333333;font-size:18px">Vamos realizar um Workshop abe=
+rto ao p=C3=BAblico na pr=C3=B3xima segunda-feira =C3=A0s 20h, numa sala fe=
+chada pelo Zoom.</p>=0A<br><p style=3D"Margin:0;-webkit-text-size-adjust:no=
+ne;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:robot=
+o, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color:#3=
+33333;font-size:18px">Inclusive vai ter certificado para quem assistir o Wo=
+rkshop por completo.</p>=0A<br><p style=3D"Margin:0;-webkit-text-size-adjus=
+t:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:r=
+oboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;colo=
+r:#333333;font-size:18px">Quer participar? Entre no Grupo Exclusivo dos alu=
+nos deste Workshop:</p>=0A<br><p style=3D"Margin:0;-webkit-text-size-adjust=
+:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:ro=
+boto, 'helvetica neue', helvetica, arial, sans-serif;line-height:27px;color=
+:#333333;font-size:18px"><b><a target=3D"_blank" href=3D"https://clickgeo1.=
+lt.acemlnc.com/Prod/link-tracker?redirectUrl=3DaHR0cHMlM0ElMkYlMkZjaGF0Lndo=
+YXRzYXBwLmNvbSUyRkNwVndtOGsyakdPNFN6NFpYZDFJSGo=3D&sig=3D47keS7B5sDgXGGy6Yd=
+wyaPvbnnZsUmG9DGSKY3wi4AtZ&iat=3D1711545288&a=3D%7C%7C226170223%7C%7C&accou=
+nt=3Dclickgeo1%2Eactivehosted%2Ecom&email=3DaygoBS0UQY60PuF8Ektejxy3xXYe2cm=
+qP0VqQtYw%2BBJfjwLA7j2ENAQ%3D%3AfjO%2B%2BKu33hX%2FSJjLFYOEufkmNpj%2B1XQv&s=
+=3D7c9fcb3ac8ba50a7a7b30df1d6827432&i=3D747A1307A35A3955" style=3D"-webkit-=
+text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactl=
+y;text-decoration:underline;color:#0000EE;font-size:18px">[QUERO ENTRAR no =
+Grupo do Workshop de Krigagem]</a></b></p>=0A<br><p style=3D"Margin:0;-webk=
+it-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exa=
+ctly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;lin=
+e-height:27px;color:#333333;font-size:18px">Caso voc=C3=AA n=C3=A3o consiga=
+ entrar pelo link acima, me chame no WhatsApp (83 9.8885.5525) pedindo para=
+ entrar no Workshop de Krigagem.</p>=0A<br><p style=3D"Margin:0;-webkit-tex=
+t-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;f=
+ont-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-heig=
+ht:27px;color:#333333;font-size:18px">Combinado?</p>=0A<p style=3D"Margin:0=
+;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-ru=
+le:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-ser=
+if;line-height:27px;color:#333333;font-size:18px"><br></p>=0A<p style=3D"Ma=
+rgin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-hei=
+ght-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sa=
+ns-serif;line-height:21px;color:#333333;font-size:14px;display:none"><br></=
+p>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A=
+</table>=0A</td>=0A</tr>=0A</table>=0A</td>=0A</tr>=0A</table>=0A<table cla=
+ss=3D"es-footer ac-footer" cellspacing=3D"0" cellpadding=3D"0" align=3D"cen=
+ter" role=3D"none" style=3D"mso-table-lspace:0pt;mso-table-rspace:0pt;borde=
+r-collapse:collapse;border-spacing:0px;table-layout:fixed !important;width:=
+100%;background-color:transparent;background-repeat:repeat;background-posit=
+ion:center top"><tr><td align=3D"center" class=3D"es-footer-body" style=3D"=
+padding:0;Margin:0;background-color:transparent;padding-top:20px;padding-bo=
+ttom:20px;background:inherit;font-family:inherit;font-size:12px;color:inher=
+it"><p style=3D"Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust=
+:none;mso-line-height-rule:exactly;font-family:inherit;line-height:150%;col=
+or:inherit;font-size:inherit">Enviado para: euberfabiosouza@gmail.com<br><b=
+r><a style=3D"-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-l=
+ine-height-rule:exactly;text-decoration:underline;color:inherit;font-size:i=
+nherit;font-family:inherit;font-weight:inherit"=0Ahref=3D"http://clickgeo1.=
+activehosted.com/proc.php?nl=3D35&c=3D747&m=3D1307&s=3D7c9fcb3ac8ba50a7a7b3=
+0df1d6827432&act=3Dunsub" target=3D"_blank">Cancelar inscri=C3=A7=C3=A3o</a=
+><br><br><span class=3D"perstag_address" style=3D"color:inherit;font-family=
+:inherit;font-size:inherit">ClickGeo, Rua Elisa de Holanda Cavalcante 118, =
+Jo=C3=A3o Pessoa - Para=C3=ADba, 58075705, Brasil</span></p>=0A</td>=0A</tr=
+>=0A</table>=0A<img src=3D"https://clickgeo1.lt.acemlnc.com/Prod/link-track=
+er?nl=3D35&c=3D747&m=3D1307&s=3D7c9fcb3ac8ba50a7a7b30df1d6827432&l=3Dopen&a=
+ccount=3Dclickgeo1.activehosted.com&a=3D226170223" border=3D"0" width=3D"1"=
+ height=3D"1" style=3D"display:block;width:1px!important;min-width:1px!impo=
+rtant;max-width:1px!important;height:1px!important;border:0;overflow:hidden=
+;" /><br clear=3D"all" /></body>=0A</html>
+--_=_swift-69118101866041a6737e834.65845232_=_--
+

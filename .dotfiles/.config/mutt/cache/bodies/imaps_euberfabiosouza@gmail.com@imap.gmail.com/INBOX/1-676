@@ -1,0 +1,276 @@
+Delivered-To: euberfabiosouza@gmail.com
+Received: by 2002:a05:7412:a5a0:b0:11b:dc66:9ca8 with SMTP id x32csp1396552rdd;
+        Mon, 22 Jul 2024 15:16:04 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGGFm9dkZXhB3OT/05NdAlP8bjC9YZMBjWRPPyTfcv+QJmcjHaukimuDIOYK/aBbZrDugYw
+X-Received: by 2002:a17:907:7f16:b0:a72:6f10:52da with SMTP id a640c23a62f3a-a7a885a059cmr87505266b.59.1721686563922;
+        Mon, 22 Jul 2024 15:16:03 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1721686563; cv=none;
+        d=google.com; s=arc-20160816;
+        b=vN+iICmPsp3aR4wL156X6nHxvqWajSME58ak/ne3/DgLnGWRXI2VBobyJdH5/LfH95
+         oRF0GAi8z1KooigoDhqqZ9e1QvqVCBJz5+X1q/SDZ/9zGLj1mrnn/Sg8251A1sAycNBc
+         sqTmHjFLd3w89fdmDhfWjPH7B6L3FIu1seIw9nmMb6UtDRCFKBj8JoDfIFWv1D5c9A8/
+         yaQoYxGWIzd1Jg5MINBTcig75kITEFWSSJj9fxeBnQqjtAjoO8rPgfyn5sAVQ3WXvb21
+         fWbXN1vYn85ZpMABF1mFuluE8Yin32huT42prubafelguDlSkBNdmjEg0Ja4R/CYyo0j
+         JQ7A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:require-recipient-valid-since:reply-to:precedence
+         :mime-version:message-id:list-unsubscribe-post:list-unsubscribe:from
+         :feedback-id:dkim-signature:dkim-signature:date;
+        bh=9GUU+oNQpEC29c2aOOe8bBKMkKowwO8FMaHnzmzXDvI=;
+        fh=5K9XUVe8eJWTh62FMJPj2il/Y4Bvn0rcjNCgIaA8HzM=;
+        b=O4Zx1pY9toBHmba55On2w7YFMSt8CEi4atdhlyWJakIVNItmcIoU89klSrshRLm47N
+         rsiK9J4ngM+HxhxxFCy+3HIoojGfwPMMDQ8jfgLVDDX75OJ5SdSMy9aWraXiutUhl2tS
+         0/MOO7ZK9CuuNbTu7AwhPM92g4r1J7IvkHZVOGBXCZQ01UEr9xIszc96Huqogm6RIduh
+         xqA/IZ9sn3N3ig0Ui7JxsyO0b6Sg/3MSrjdy1v44oSYwjlSqScXcxZ3fWXuj3tox3XD8
+         dcZYGN2tGSOdY8LhtDLtbrJaGZPjC4hZq9U1xJG8NwuSuQwvguviIH2pNm4g2YCXfYl2
+         HViw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@getresponse-mail.com header.s=k1024e header.b="P/oxHlK+";
+       dkim=pass header.i=@clickgeo.com.br header.s=a5888614 header.b="MxkPf/dv";
+       spf=pass (google.com: domain of bounce-164992602@bounce.getresponse-mail.com designates 104.160.65.52 as permitted sender) smtp.mailfrom=bounce-164992602@bounce.getresponse-mail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clickgeo.com.br
+Return-Path: <bounce-164992602@bounce.getresponse-mail.com>
+Received: from mta-52.gamma.getresponse-mail.com (mta-52.gamma.getresponse-mail.com. [104.160.65.52])
+        by mx.google.com with ESMTPS id a640c23a62f3a-a7a94d19aaesi7943266b.96.2024.07.22.15.16.03
+        for <euberfabiosouza@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 22 Jul 2024 15:16:03 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-164992602@bounce.getresponse-mail.com designates 104.160.65.52 as permitted sender) client-ip=104.160.65.52;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@getresponse-mail.com header.s=k1024e header.b="P/oxHlK+";
+       dkim=pass header.i=@clickgeo.com.br header.s=a5888614 header.b="MxkPf/dv";
+       spf=pass (google.com: domain of bounce-164992602@bounce.getresponse-mail.com designates 104.160.65.52 as permitted sender) smtp.mailfrom=bounce-164992602@bounce.getresponse-mail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=clickgeo.com.br
+Content-Type: multipart/alternative; boundary=30293ba3909c554670a2025585dee5d6
+Date: Mon, 22 Jul 2024 22:16:00 +0000
+DKIM-Signature: a=rsa-sha256; b=P/oxHlK+IPJ8xbwBrdaEzJRfhjWknu6uAgDAk1Qg/1ZEEShBn0HIgXoc598ND0wUGCK4xBo4XhGkfwRoX60jJpR9Y+J38rrbvwqQaTwEpNW9KP2IgEU2sWsF4LKNtA7VK9suTfPYxdMV/pYCcjuL1vTlZWqU4YAsIWIFwtyG1+Q=; bh=yBjLqOAT18S6L/rB+U0P02YjHGY32dkrmkEsCbFLugc=; c=simple/simple; d=getresponse-mail.com; h=Sender:From:From:To:To:CC:Subject:Subject:Message-ID:Message-ID:Form-Sub:List-Unsubscribe:List-Unsubscribe:List-Unsubscribe-Post:List-Unsubscribe-Post:X-CSA-Complaints:X-CSA-Complaints; s=k1024e; t=1721686560; v=1; x=1721772960;
+DKIM-Signature: a=rsa-sha256; b=MxkPf/dvTTXdrrO6OhdcbVpiKojhSpm7SgfO/F2hq5KOR9HDFqc1ZHTrIR+HlCVczoT0FzDnXRnC1bl3JRtwAC6mHFT41xrwigqgjKnzXCTxVFMacbuCZ6duEr/CVxr4/XKIlWe8al5JlUQ/scE4lFKhfgC9WZq8Kz/P5LEZWfo=; bh=yBjLqOAT18S6L/rB+U0P02YjHGY32dkrmkEsCbFLugc=; c=simple/simple; d=clickgeo.com.br; h=Sender:From:From:To:To:CC:Subject:Subject:Message-ID:Message-ID:Form-Sub:List-Unsubscribe:List-Unsubscribe:List-Unsubscribe-Post:List-Unsubscribe-Post:X-CSA-Complaints:X-CSA-Complaints; s=a5888614; t=1721686560; v=1; x=1721772960;
+Feedback-ID: c=un66u5:u=ljpib5:splittest:getresponse
+From: "Anderson Medeiros" <contato@clickgeo.com.br>
+List-Unsubscribe: <https://app.getresponse.com/one_click_unsubscribe.html?x=a62b&m=BWCBSS&s=BJQfpY8&u=CtryE&z=EtJRwTv&>, <mailto:listunsubscribe@getresponse-mail.com?subject=getresponse.xserial.s56bdMYLc2jl%2B%2B%2BkRFwWD0m5zg5tlHnODVJLPKwASQTou7t9zNp34%2FC899YPE4YZceWoetM6pzM%2FSO6ovzIxp7igflIrmYr17BRzSeqI%2F7xe8YHFFJ5rZICuibffCyExDFHUOrePlk7IEmufENuEIZGHeA%3D%3D>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+Message-ID: <getresponse.xserial.s56bdMYLc2jl+++kRFwWD0m5zg5tlHnODVJLPKwASQTou7t9zNp34/C899YPE4YZceWoetM6pzM/SO6ovzIxp7igflIrmYr17BRzSeqI/7xe8YHFFJ5rZICuibffCyExDFHUOrePlk7IEmufENuEIZGHeA==@getresponse-mail.com>
+MIME-Version: 1.0
+Precedence: bulk
+Reply-To: contato@clickgeo.com.br
+Require-Recipient-Valid-Since: euberfabiosouza@gmail.com; Tue, 21 May 2024 06:43:54 +0000
+Return-Path: bounce-164992602@bounce.getresponse-mail.com
+Subject: =?UTF-8?Q?Como_Dividir_Pol=C3=ADgonos_em_Partes_Iguais_no_QGIS?=
+To: euberfabiosouza@gmail.com
+X-Complaints-To: abuse@getresponse-mail.com
+X-CSA-Complaints: csa-complaints@eco.de
+
+
+--30293ba3909c554670a2025585dee5d6
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Isso =C3=A9 =C3=BAtil demais!=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=
+=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=
+=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =E2=80=8C =
+=E2=80=8C=20=0A=0A=0AOpa! Imagine que voc=C3=AA vai prestar servi=C3=A7o de=
+ Produ=C3=A7=C3=A3o de Mapas e Geoprocessamento relacionado com um projeto =
+de loteamento.=0A=0A=0AVoc=C3=AA quer dividir o pol=C3=ADgono de uma propri=
+edade em lotes menores, onde cada parte tenha a mesma =C3=A1rea.=0A=0A=0AVo=
+c=C3=AA sabe como realizar este procedimento?=0A=0A=0AEu ensino como voc=C3=
+=AA pode fazer isso, neste material aqui:=0A=0A=0A[Como Dividir Pol=C3=ADgo=
+nos em Partes Iguais no QGIS] [https://app.getresponse.com/click.html?x=3Da=
+62b&lc=3DhS2JTP&mc=3DJb&s=3DBJQfpY8&u=3DCtryE&z=3DEtCbyTz&]=0A=0A=0AJ=C3=A1=
+ salva esse post para que ele te salve depois! Hehe=0A=0A=0AN=C3=A3o esquec=
+e de seguir nosso perfil.=0A=0A=0A=0AClickGeo, R. Elisa de Holanda Cavalcan=
+te, 118, Ernesto Geisel, 58075507, Jo=C3=A3o Pessoa, Brazil=0A=0AVoc=C3=AA =
+pode cancelar [https://app.getresponse.com/unsubscribe.html?x=3Da62b&m=3DBW=
+CBSS&mc=3DJb&s=3DBJQfpY8&u=3DCtryE&z=3DEyVQyis&pt=3Dunsubscribe] ou alterar=
+ seus dados de contato [https://app.getresponse.com/change_details.html?x=
+=3Da62b&m=3DBWCBSS&s=3DBJQfpY8&u=3DCtryE&z=3DEE7wCPs&pt=3Dchange_details] a=
+ qualquer momento.=0APowered by: https://app.getresponse.com/referral.html?=
+x=3Da62b&c=3D0ISIJ&u=3DCtryE&z=3DEJLCF7G&=
+
+--30293ba3909c554670a2025585dee5d6
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!doctype html><html lang=3D"und" dir=3D"auto" xmlns=3D"http://www.w3.org/1=
+999/xhtml" xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas=
+-microsoft-com:office:office"><head><title></title><!--[if !mso]><!--><meta=
+ http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><!--<![endif]--><meta=
+ http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8"><meta n=
+ame=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><style =
+type=3D"text/css">#outlook a { padding:0; }=0A      body { margin:0;padding=
+:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%; }=0A      table=
+, td { border-collapse:collapse;mso-table-lspace:0pt;mso-table-rspace:0pt; =
+}=0A      img { border:0;height:auto;line-height:100%; outline:none;text-de=
+coration:none;-ms-interpolation-mode:bicubic; }=0A      p { display:block;m=
+argin:13px 0; }</style><!--[if mso]>=0A    <noscript>=0A    <xml>=0A    <o:=
+OfficeDocumentSettings>=0A      <o:AllowPNG/>=0A      <o:PixelsPerInch>96</=
+o:PixelsPerInch>=0A    </o:OfficeDocumentSettings>=0A    </xml>=0A    </nos=
+cript>=0A    <![endif]--><!--[if lte mso 11]>=0A    <style type=3D"text/css=
+">=0A      .mj-outlook-group-fix { width:100% !important; }=0A    </style>=
+=0A    <![endif]--><style type=3D"text/css">@media only screen and (min-wid=
+th:480px) {=0A        .mj-column-per-100 { width:100% !important; max-width=
+: 100%; }=0A      }</style><style media=3D"screen and (min-width:480px)">.m=
+oz-text-html .mj-column-per-100 { width:100% !important; max-width: 100%; }=
+</style><style type=3D"text/css">@media (max-width: 479px) {=0D=0A.hide-on-=
+mobile {=0D=0Adisplay: none !important;=0D=0A}=0D=0A}=0A.gr-mltext-rrtjjq a=
+,=0D=0A.gr-mltext-rrtjjq a:visited {=0D=0Atext-decoration: none;=0D=0A}=0A.=
+gr-footer-ylccdt a,=0D=0A.gr-footer-ylccdt a:visited {=0D=0Acolor: #00BAFF;=
+=0D=0Atext-decoration: underline;=0D=0A}</style></head><body style=3D"word-=
+spacing:normal;background-color:#FFFFFF;"><div style=3D"display:none;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">Isso=C2=A0=C3=A9=C2=A0=C3=BAtil=C2=A0demais!<div style=
+=3D"max-height:0; overflow:hidden; mso-hide:all;" aria-hidden=3D"true">&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp; &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp; &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp=
+;&zwnj;&nbsp;&zwnj;&nbsp; &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zw=
+nj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;=
+&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nb=
+sp;&zwnj;&nbsp; &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj=
+;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&z=
+wnj;&nbsp;&zwnj;&nbsp; &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;</div></div><div style=3D"background-color:#FF=
+FFFF;" lang=3D"und" dir=3D"auto">  <!--[if mso | IE]><table align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"prese=
+ntation" style=3D"width:600px;" width=3D"600" ><tr><td style=3D"line-height=
+:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><div style=3D=
+"margin:0px auto;max-width:600px;"><table align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"width:100%;=
+"><tbody><tr><td style=3D"border-bottom:0 none #000000;border-left:0 none #=
+000000;border-right:0 none #000000;border-top:0 none #000000;direction:ltr;=
+font-size:0px;padding:10px 5px 20px 5px;text-align:center;"><!--[if mso | I=
+E]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=
+=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;width:590px;" ><![end=
+if]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-s=
+ize:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:t=
+op;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" rol=
+e=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"background-color:=
+transparent;border-bottom:none;border-left:none;border-right:none;border-to=
+p:none;vertical-align:top;padding:0;"><table border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody></tbody></ta=
+ble></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![=
+endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></tabl=
+e><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+class=3D"" role=3D"presentation" style=3D"width:600px;" width=3D"600" ><tr>=
+<td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><=
+![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table align=3D"=
+center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentati=
+on" style=3D"width:100%;"><tbody><tr><td style=3D"border-bottom:0 none #000=
+000;border-left:0 none #000000;border-right:0 none #000000;border-top:0 non=
+e #000000;direction:ltr;font-size:0px;padding:20px 0;text-align:center;"><!=
+--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0"=
+ cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;width:600=
+px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" sty=
+le=3D"font-size:0px;text-align:left;direction:ltr;display:inline-block;vert=
+ical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D"backg=
+round-color:transparent;border-bottom:none;border-left:none;border-right:no=
+ne;border-top:none;vertical-align:top;padding:0;"><table border=3D"0" cellp=
+adding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody>=
+<tr><td align=3D"left" class=3D"gr-mltext-ltcuci gr-mltext-rrtjjq" style=3D=
+"font-size:0px;padding:10px;word-break:break-word;"><div style=3D"font-fami=
+ly:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1.4;text=
+-align:left;color:#000000;"><p style=3D"font-family:Arial;font-size:14px;ma=
+rgin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;">Opa! Imag=
+ine que voc=C3=AA vai prestar servi=C3=A7o de Produ=C3=A7=C3=A3o de Mapas e=
+ Geoprocessamento relacionado com um projeto de loteamento.</p><p style=3D"=
+font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;font-weig=
+ht:normal;color:#000000;"><br></p><p style=3D"font-family:Arial;font-size:1=
+4px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;">Voc=
+=C3=AA quer dividir o pol=C3=ADgono de uma propriedade em lotes menores, on=
+de cada parte tenha a mesma =C3=A1rea.</p><p style=3D"font-family:Arial;fon=
+t-size:14px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#0000=
+00;"><br></p><p style=3D"font-family:Arial;font-size:14px;margin-top:0px;ma=
+rgin-bottom:0px;font-weight:normal;color:#000000;">Voc=C3=AA sabe como real=
+izar este procedimento?</p><p style=3D"font-family:Arial;font-size:14px;mar=
+gin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><br></p><p=
+ style=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px=
+;font-weight:normal;color:#000000;">Eu ensino como voc=C3=AA pode fazer iss=
+o, neste material aqui:</p><p style=3D"font-family:Arial;font-size:14px;mar=
+gin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;"><br></p><p=
+ style=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px=
+;font-weight:normal;color:#000000;"><a href=3D"https://app.getresponse.com/=
+click.html?x=3Da62b&lc=3DhS2JTP&mc=3DJb&s=3DBJQfpY8&u=3DCtryE&z=3DEhfkw0G&"=
+ style=3D"text-decoration: none; color: inherit;" target=3D"_blank" class=
+=3D"link-id-efg5yiczc"><span style=3D"color: #00BAFF"><strong><u>[Como Divi=
+dir Pol=C3=ADgonos em Partes Iguais no QGIS]</u></strong></span></a></p><p =
+style=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;=
+font-weight:normal;color:#000000;"><br></p><p style=3D"font-family:Arial;fo=
+nt-size:14px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#000=
+000;">J=C3=A1 salva esse post para que ele te salve depois! Hehe</p><p styl=
+e=3D"font-family:Arial;font-size:14px;margin-top:0px;margin-bottom:0px;font=
+-weight:normal;color:#000000;"><br></p><p style=3D"font-family:Arial;font-s=
+ize:14px;margin-top:0px;margin-bottom:0px;font-weight:normal;color:#000000;=
+">N=C3=A3o esquece de seguir=C2=A0nosso=C2=A0perfil.</p></div></td></tr></t=
+body></table></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></=
+table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]></td></=
+tr></table><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" class=3D"" role=3D"presentation" style=3D"width:600px;" width=3D"6=
+00" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:ex=
+actly;"><![endif]--><div style=3D"margin:0px auto;max-width:600px;"><table =
+align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"p=
+resentation" style=3D"width:100%;"><tbody><tr><td style=3D"border-bottom:0 =
+none #000000;border-left:0 none #000000;border-right:0 none #000000;border-=
+top:0 none #000000;direction:ltr;font-size:0px;padding:5px;text-align:cente=
+r;"><!--[if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;wid=
+th:590px;" ><![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fi=
+x" style=3D"font-size:0px;text-align:left;direction:ltr;display:inline-bloc=
+k;vertical-align:top;width:100%;"><table border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0" role=3D"presentation" width=3D"100%"><tbody><tr><td style=3D=
+"background-color:transparent;border-bottom:none;border-left:none;border-ri=
+ght:none;border-top:none;vertical-align:top;padding:0;"><table border=3D"0"=
+ cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%"><=
+tbody><tr><td align=3D"center" class=3D"gr-footer-mnweoa gr-footer-ylccdt" =
+style=3D"font-size:0px;padding:10px;word-break:break-word;"><div style=3D"f=
+ont-family:Arial;font-size:10px;font-style:normal;line-height:1;text-align:=
+center;text-decoration:none;color:#000000;"><div>ClickGeo, R. Elisa de Hola=
+nda Cavalcante, 118, Ernesto Geisel, 58075507, Jo=C3=A3o Pessoa, Brazil<br>=
+<br>Voc=C3=AA pode <a href=3D"https://app.getresponse.com/unsubscribe.html?=
+x=3Da62b&m=3DBWCBSS&mc=3DJb&s=3DBJQfpY8&u=3DCtryE&z=3DEFv0hzW&pt=3Dunsubscr=
+ibe" target=3D"_blank">cancelar</a> ou <a href=3D"https://app.getresponse.c=
+om/change_details.html?x=3Da62b&m=3DBWCBSS&s=3DBJQfpY8&u=3DCtryE&z=3DES2nyW=
+Q&pt=3Dchange_details" target=3D"_blank">alterar seus dados de contato</a> =
+a qualquer momento.</div></div></td></tr></tbody></table></td></tr></tbody>=
+</table></div><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></t=
+body></table></div><!--[if mso | IE]></td></tr></table><![endif]--><table a=
+lign=3D"center" style=3D"font-family: 'Roboto', Helvetica, sans-serif; font=
+-weight: 400; letter-spacing: .018em; text-align: center; font-size: 10px;"=
+><tr><td style=3D"padding-bottom: 20px"><br /><div style=3D"color: #939598;=
+">Powered by:</div><a href=3D"https://app.getresponse.com/referral.html?x=
+=3Da62b&c=3D0ISIJ&u=3DCtryE&z=3DEhfYIna&"><img src=3D"https://app.getrespon=
+se.com/images/common/templates/badges/gr_logo_2.png" alt=3D"GetResponse" bo=
+rder=3D"0" style=3D"display:block;" width=3D"120" height=3D"24"/></a></td><=
+/tr></table></div></body></html><img src=3D"https://app.getresponse.com/ope=
+n.html?x=3Da62b&m=3DBWCBSS&mc=3DJb&s=3DBJQfpY8&u=3DCtryE&z=3DEQJMV1e&" widt=
+h=3D"0" height=3D"0" border=3D"0" alt=3D"" role=3D"presentation" />=
+
+--30293ba3909c554670a2025585dee5d6--
