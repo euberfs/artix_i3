@@ -131,7 +131,20 @@ Adding the Username to the Sudoers File
 
     sudo reboot
 
-# add asteriks when you type your password
+# polybar
+git clone --depth=1 https://github.com/adi1090x/polybar-themes.git && cd polybar-themes
+cd ~/polybar-themes && chmod +x ./setup.sh && ./setup.sh 
+rm -rf $HOME/polybar-themes
+ 
+# tmux
+Tmux PlugManager
+    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+
+.tmux.conf
+    tmux source ~/.tmux.conf
+    Press prefix + I  to fetch the plugin.
+
+# Add asteriks when you type your password
     echo 'Defaults pwfeedback'|sudo tee /etc/sudoers.d/0pwfeedback
 
 # yay
@@ -153,18 +166,6 @@ networkmanager-dmenu
 tgpt-bin
 perl-image-exiftool
 
-# polybar
-git clone --depth=1 https://github.com/adi1090x/polybar-themes.git && cd polybar-themes
-cd ~/polybar-themes && chmod +x ./setup.sh && ./setup.sh 
-rm -rf $HOME/polybar-themes
- 
-# tmux
-Tmux PlugManager
-    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
-
-.tmux.conf
-    tmux source ~/.tmux.conf
-    Press prefix + I  to fetch the plugin.
 # mc
 Choose the skin through the mc UI with F9 > Options > Appearance
 
