@@ -35,6 +35,9 @@ $ ls /sys/firmware/efi/efivars
 # Use fstabgen to generate /etc/fstab, use -U for UUIDs as source identifiers and -L for partition labels: 
     fstabgen -U /mnt >> /mnt/etc/fstab
 
+# Check the resulting fstab for errors before rebooting. Now, you can chroot into your new Artix system with: 
+ artix-chroot /mnt
+
 # Configure the system clock
     ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
     hwclock --systohc
@@ -101,8 +104,8 @@ Adding the Username to the Sudoers File
 
     su root
     
-    root		ALL=(ALL:ALL) ALL
-    USERNAME  ALL=(ALL:ALL) ALL
+    root	ALL=(ALL:ALL) ALL
+    USERNAME  	ALL=(ALL:ALL) ALL
 
 # Login into newly created user
     su - USERNAME
@@ -110,7 +113,7 @@ Adding the Username to the Sudoers File
 # Add Arch Linux repos, extra + Community
 	sudo pacman -Syu artix-archlinux-support
 	git clone https://github.com/euberfs/artix_i3.git
-	sudo cat repos >> /etc/pacman.conf
+	cd artix_i3 & sudo cat repos >> /etc/pacman.conf
 	sudo pacman-key --populate archlinux
 
 # Post installation configuration
@@ -121,12 +124,11 @@ Adding the Username to the Sudoers File
 	xdg-user-dirs-update
 
 # Dofiles
-	cd artix_i3/dotfiles && stow .
+	cp -r ~/artix_i3/.dotfiles ~/
+	cd artix_i3/.dotfiles && stow .
 
 # Reboot the system
 
-    exit                           
-    umount -R /mnt
     sudo reboot
 
 # add asteriks when you type your password
