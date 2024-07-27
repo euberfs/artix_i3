@@ -17,9 +17,9 @@ done
 PACMAN_INSTALL=(
 xorg-server
 xorg-apps
-xinit
+xorg-xinit
+xorg-xinput
 i3
-polybar
 i3lock
 rofi
 trahs-cli
@@ -52,7 +52,6 @@ git
 wget
 npm
 scrot
-xorg-xinput
 mutt
 calc
 tmux
