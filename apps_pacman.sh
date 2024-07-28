@@ -101,7 +101,7 @@ xcape
 unclutter  
 numlockx
 alacritty
-lightdm
+lightdm-openrc
 lightdm-gtk-greeter
 ttc-iosevka
 noto-fonts
