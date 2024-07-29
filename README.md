@@ -2,13 +2,13 @@
 
 	$ ls /sys/firmware/efi/efivars
 
-# Set the keyboard layout
+Set the keyboard layout
 	ls -R /usr/share/kbd/keymaps
 
-# Partition your disk
+Partition your disk
     cfdisk /dev/sda 
 
-# Format and mount partitions
+Format and mount partitions
 
     mkfs.fat -F 32 /dev/sda1
     fatlabel /dev/sda1 BOOT
@@ -22,29 +22,29 @@
     mkswap -L SWAP /dev/sda4           
     swapon /dev/disk/by-label/SWAP 
 
-# Connect to the Internet
+Connect to the Internet
     ping artixlinux.org
 
-# Update the system clock
+Update the system clock
     rc-service ntpd start
 
-# Install base system
+Install base system
     basestrap /mnt base base-devel openrc elogind-openrc
 
-# Install a kernel
+Install a kernel
     basestrap /mnt linux linux-firmware
 
-# Use fstabgen to generate /etc/fstab, use -U for UUIDs as source identifiers and -L for partition labels: 
+Use fstabgen to generate /etc/fstab, use -U for UUIDs as source identifiers and -L for partition labels: 
     fstabgen -U /mnt >> /mnt/etc/fstab
 
-# Check the resulting fstab for errors before rebooting. Now, you can chroot into your new Artix system with: 
+Check the resulting fstab for errors before rebooting. Now, you can chroot into your new Artix system with: 
      artix-chroot /mnt
 
-# Configure the system clock
+Configure the system clock
     ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
     hwclock --systohc
 
-# Localization
+Localization
     pacman -Syu
     nano /etc/locale.gen
     locale-gen
@@ -54,26 +54,26 @@ To set the locale systemwide, create or edit /etc/locale.conf (which is sourced 
     export LANG="en_US.UTF-8"    
     export LC_COLLATE="C"
 
-# Chroot into your new Artix
+Chroot into your new Artix
  artix-chroot /mnt # formerly artools-chroot
 
-# Boot Loader
+Boot Loader
 
     pacman -S grub os-prober efibootmgr
     grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
     grub-mkconfig -o /boot/grub/grub.cfg
 
-# Update
+Update
 
 	sudo pacman -Syu neovim git
 
-# Add user(s)
+Add user(s)
 
     passwd
     useradd -m user
     passwd user
 
-# Network configuration
+Network configuration
 
     nvim /etc/hostname
 
@@ -87,19 +87,19 @@ If you use OpenRC you should add your hostname to /etc/conf.d/hostname too:
 
     hostname='myhostname'
 
-# Install connman and optionally a front-end:
+Install connman and optionally a front-end:
 
     pacman -S connman-openrc connman-gtk
     rc-update add connmand
 
-# Reboot the system
+Reboot the system
 
     exit                           
     umount -R /mnt
     sudo reboot
 
 
-# Grant root access to our user
+Grant root access to our user
     EDITOR=nvim visudo
  
 Adding the Username to the Sudoers File
@@ -109,27 +109,27 @@ Adding the Username to the Sudoers File
     root	ALL=(ALL:ALL) ALL
     USERNAME  	ALL=(ALL:ALL) ALL
 
-# Login into newly created user
+Login into newly created user
     su - USERNAME
 
-# Add Arch Linux repos, extra + Community
+Add Arch Linux repos, extra + Community
 	sudo pacman -Syu artix-archlinux-support
 	git clone https://github.com/euberfs/artix_i3.git
 	cd artix_i3 & sudo cat repos >> /etc/pacman.conf
 	sudo pacman-key --populate archlinux
 
-# Post installation configuration
+Post installation configuration
 	cd artix_i3 
 	sudo sh apps_pacman.sh
 
-# HOME directory
+HOME directory
 	xdg-user-dirs-update
 
-# Dofiles
+Dofiles
 	cp -r ~/artix_i3/.dotfiles ~/
 	cd artix_i3/.dotfiles && stow .
 
-# Reboot the system
+Reboot the system
 
     sudo reboot
 
