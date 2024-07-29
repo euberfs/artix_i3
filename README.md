@@ -3,7 +3,7 @@
 	$ ls /sys/firmware/efi/efivars
 
 # Set the keyboard layout
-    ls -R /usr/share/kbd/keymaps
+	ls -R /usr/share/kbd/keymaps
 
 # Partition your disk
     cfdisk /dev/sda 
