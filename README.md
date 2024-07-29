@@ -3,9 +3,11 @@
 	$ ls /sys/firmware/efi/efivars
 
 Set the keyboard layout
+
 	ls -R /usr/share/kbd/keymaps
 
 Partition your disk
+
     cfdisk /dev/sda 
 
 Format and mount partitions
@@ -23,28 +25,36 @@ Format and mount partitions
     swapon /dev/disk/by-label/SWAP 
 
 Connect to the Internet
+
     ping artixlinux.org
 
 Update the system clock
+
     rc-service ntpd start
 
 Install base system
+
     basestrap /mnt base base-devel openrc elogind-openrc
 
 Install a kernel
+
     basestrap /mnt linux linux-firmware
 
 Use fstabgen to generate /etc/fstab, use -U for UUIDs as source identifiers and -L for partition labels: 
+
     fstabgen -U /mnt >> /mnt/etc/fstab
 
 Check the resulting fstab for errors before rebooting. Now, you can chroot into your new Artix system with: 
+
      artix-chroot /mnt
 
 Configure the system clock
+
     ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
     hwclock --systohc
 
 Localization
+
     pacman -Syu
     nano /etc/locale.gen
     locale-gen
@@ -55,6 +65,7 @@ To set the locale systemwide, create or edit /etc/locale.conf (which is sourced 
     export LC_COLLATE="C"
 
 Chroot into your new Artix
+
  artix-chroot /mnt # formerly artools-chroot
 
 Boot Loader
@@ -100,6 +111,7 @@ Reboot the system
 
 
 Grant root access to our user
+
     EDITOR=nvim visudo
  
 Adding the Username to the Sudoers File
@@ -110,22 +122,27 @@ Adding the Username to the Sudoers File
     USERNAME  	ALL=(ALL:ALL) ALL
 
 Login into newly created user
+
     su - USERNAME
 
 Add Arch Linux repos, extra + Community
+
 	sudo pacman -Syu artix-archlinux-support
 	git clone https://github.com/euberfs/artix_i3.git
 	cd artix_i3 & sudo cat repos >> /etc/pacman.conf
 	sudo pacman-key --populate archlinux
 
 Post installation configuration
+
 	cd artix_i3 
 	sudo sh apps_pacman.sh
 
 HOME directory
+
 	xdg-user-dirs-update
 
 Dofiles
+
 	cp -r ~/artix_i3/.dotfiles ~/
 	cd artix_i3/.dotfiles && stow .
 
