@@ -1,4 +1,4 @@
-# Installation
+* Installation
 $ ls /sys/firmware/efi/efivars
 
 # Set the keyboard layout
