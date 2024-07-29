@@ -1,8 +1,6 @@
-* Installation
-* 
-#+begin_src bash  
+# Installation
+ 
 $ ls /sys/firmware/efi/efivars
-#+end_src
 
 # Set the keyboard layout
     ls -R /usr/share/kbd/keymaps
